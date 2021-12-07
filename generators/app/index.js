@@ -548,18 +548,4 @@ module.exports = class extends yeoman {
       }
     )
   }
-
-  install() {
-    this.installDependencies({
-      npm: true,
-      bower: false,
-      yarn: false
-    });
-  }
-
-  end() {
-    // Run npm install again to resolve dependencies.
-    this.log('\n' + chalk.green('(generator-addin) Resolving dependencies...'));
-    this.spawnCommand('npm', ['install']);
-  }
 };
